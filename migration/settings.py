@@ -69,7 +69,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'migration.wsgi.application'
 
-
+GDPR_MODELS_APP_LABEL = "core"
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
