@@ -1,0 +1,4 @@
+id,email,phone,create_date
+1,ala@example.com,111111111,2024-10-01T09:00:00Z
+2,bob@example.com,222222222,2024-10-01T09:00:00Z
+3,duplikat@example.com,222222222,2024-10-01T09:00:00Z

@@ -1,0 +1,3 @@
+id,phone,gdpr_consent,create_date
+1,222222222,False,2024-11-04T12:00:00Z
+2,333333333,True,2024-11-05T12:00:00Z
