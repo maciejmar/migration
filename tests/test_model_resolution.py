@@ -35,11 +35,9 @@ def test_models_are_discoverable_by_name():
 @pytest.mark.skipif(not settings.configured, reason="Django not configured")
 def test_importing_command_module_does_not_touch_apps_registry(monkeypatch):
     """Smoke test: importing the command file should not raise AppRegistryNotReady.
-    We import it as a plain module (not via Django command loader) to ensure
+    Import it as a plain module  to ensure
     there is no model resolution at import time.
     """
-    # Path here mirrors the canvas structure; adapt the dotted path if you relocate files.
-    # The important bit: module-level code must NOT call apps.get_model / apps.get_models.
     try:
         import management.commands.migrate_subscribers as cmd_mod
     except Exception as e:  # noqa: BLE001
@@ -53,6 +51,4 @@ def test_importing_command_module_does_not_touch_apps_registry(monkeypatch):
 
 @pytest.mark.skipif(not settings.configured, reason="Django not configured")
 def test_setting_app_label_disambiguates(monkeypatch):
-    # If a project has duplicated model names across apps, setting the app label
-    # should let apps.get_model resolve it deterministically when called inside handle().
     assert hasattr(settings, "INSTALLED_APPS")

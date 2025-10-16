@@ -1,0 +1,4 @@
+id,email,gdpr_consent,create_date
+1,ala@example.com,True,2024-11-01T10:00:00Z
+2,nowy@example.com,True,2024-11-02T11:00:00Z
+3,konflikt@example.com,True,2024-11-03T11:00:00Z
